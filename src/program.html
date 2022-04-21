@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sortering/Filtrering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="flexboxgrid.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Open+Sans"
+      rel="stylesheet"
+    />
+
+    <script src="mixitup.min.js" defer></script>
+    <script src="mixitup-multifilter.min.js" defer></script>
+    <script src="js.js" defer></script>
+
+    <style>
+      .dropbtn {
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <header class="col-xs-12">
+        <h2>PROGRAM</h2>
+      </header>
+
+      <div class="filtersort">
+        <div class="dropdown">
+          <button type="reset" class="dropbtn">Alle Venues</button>
+          <div class="dropdown-content">
+            <fieldset class="input-field" data-filter-group="lokation">
+              <!-- data-logic="and" -->
+              <button type="button" data-toggle=".venuea">Venue A</button>
+              <button type="button" data-toggle=".venueb">Venue B</button>
+              <button type="button" data-toggle=".venuec">Venue C</button>
+              <button type="button" data-toggle=".venued">Venue D</button>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Alle Datoer</button>
+          <div class="dropdown-content">
+            <fieldset class="input-field" data-filter-group="lokation">
+              <!-- data-logic="and" -->
+              <button type="button" data-toggle=".wednesday">
+                Wednesday 3 Aug
+              </button>
+              <button type="button" data-toggle=".thursday">
+                Thursday 4 Aug
+              </button>
+              <button type="button" data-toggle=".friday">Friday 5 Aug</button>
+              <button type="button" data-toggle=".saturday">
+                Saturday 6 Aug
+              </button>
+              <button type="button" data-toggle=".sunday">Sunday 7 Aug</button>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Spilletider</button>
+          <div class="dropdown-content">
+            <fieldset class="input-field" data-filter-group="lokation">
+              <!-- data-logic="and" -->
+              <button type="button" data-toggle=".daytime">
+                Between 12:00-15:00
+              </button>
+              <button type="button" data-toggle=".afternoon">
+                Between 15:00-18:00
+              </button>
+              <button type="button" data-toggle=".evening">
+                Between 18:00 - onwards
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <section class="row billeder">
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix maskeret venuec wednesday friday saturday daytime"
+          data-name="maskeret"
+        >
+          <div class="postthumb">
+            <img src="img/confront.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>MASKERET</p>
+            <p>Con.Front Collective</p>
+          </div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix skammer venuea thursday friday sunday afternoon"
+          data-name="skammer"
+        >
+          <div class="postthumb">
+            <img src="img/egotrip.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>SKAMMER DU PÅ MIG?</p>
+            <p>Teater EGOTRIP</p>
+          </div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix juks dag venueb wednesday saturday sunday evening"
+          data-name="et"
+        >
+          <div class="postthumb">
+            <img src="img/juks.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>ET SURT OPSTØD</p>
+            <p>Juks</p>
+          </div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix mona nat venued thursday friday daytime"
+          data-name="Mona"
+        >
+          <div class="postthumb">
+            <img src="img/monalisa.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>Mona Lisa Natten</p>
+          </div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix alt nat venuea saturday sunday afternoon"
+          data-name="alt"
+        >
+          <div class="postthumb">
+            <img src="img/panta.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>ALT KØRER, IK</p>
+            <p>Panta Reje</p>
+          </div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix staa dag venueb wednesday saturday evening"
+          data-name="staa"
+        >
+          <div class="postthumb">
+            <img src="img/tungetasker.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>STÅ RET, FÅ RET</p>
+            <p>Teater Tunge Tasker</p>
+          </div>
+        </article>
+
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix wish venuec wednesday thursday friday saturday sunday daytime"
+          data-name="wish"
+        >
+          <div class="postthumb">
+            <img src="img/wish.png" alt="flot billede" />
+          </div>
+          <div class="postmeta">
+            <p>WISH</p>
+            <p>Hvem har inviteret Odile?</p>
+          </div>
+        </article>
+        <!--  <article
+          class="col-xs-12 col-sm-4 postsummary mix william nat amagerstrand"
+          data-name="william"
+        >
+          <div class="postthumb">
+            <img src="foto16-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">19/02 - William</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix aage dag kbh"
+          data-name="aage"
+        >
+          <div class="postthumb">
+            <img src="foto10-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">01/02 - Åge</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix frank nat orestad"
+          data-name="frank"
+        >
+          <div class="postthumb">
+            <img src="foto11-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">03/02 - Frank</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix vink nat orestad"
+          data-name="vink"
+        >
+          <div class="postthumb">
+            <img src="foto12-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">06-02 - Vink</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix sol nat andet"
+          data-name="sol"
+        >
+          <div class="postthumb">
+            <img src="foto13-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">09/02 - sol</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix chong nat kbh"
+          data-name="chong"
+        >
+          <div class="postthumb">
+            <img src="foto14-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">11/02 - chong</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix titel nat kbh"
+          data-name="titel"
+        >
+          <div class="postthumb">
+            <img src="foto5-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">16/01 - titel</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix overskrift nat orestad"
+          data-name="overskrift"
+        >
+          <div class="postthumb">
+            <img src="foto15-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">15/02 - Overskrift</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix abe andet"
+          data-name="abe"
+        >
+          <div class="postthumb">
+            <img src="foto17-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">21/02 - abe</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix cirkus amagerstrand"
+          data-name="cirkus"
+        >
+          <div class="postthumb">
+            <img src="foto18-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">23-02 - Cirkus</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix heino orestad"
+          data-name="heino"
+        >
+          <div class="postthumb">
+            <img src="foto19-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">23/02 - Heino</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix frankie andet"
+          data-name="frankie"
+        >
+          <div class="postthumb">
+            <img src="foto20-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">24/02 - Frankie</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix sabine dag amagerstrand"
+          data-name="sabine"
+        >
+          <div class="postthumb">
+            <img src="foto21-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">28/02 - Sabine</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix karna kbh"
+          data-name="karna"
+        >
+          <div class="postthumb">
+            <img src="foto7-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">21/01 - Karna</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix chloe dag kbh"
+          data-name="chloe"
+        >
+          <div class="postthumb">
+            <img src="foto22-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">01/03 - Chloe</div>
+        </article>
+        <article
+          class="col-xs-12 col-sm-4 postsummary mix torben orestad"
+          data-name="torben"
+        >
+          <div class="postthumb">
+            <img src="foto23-thumb.jpg" alt="flot billede" />
+          </div>
+          <div class="postmeta">12/01 - Torben</div>
+        </article> -->
+      </section>
+    </main>
+
+    <footer class="fullwidth">
+      &copy; 2022 - lavet af stefan med kærlighed
+    </footer>
+  </body>
+</html>
