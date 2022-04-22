@@ -152,13 +152,13 @@ table {
 
 html {
   font-size: 16px;
-  font-family: "Lora", serif;
+  font-family: "Abel", sans-serif;
 }
 body {
   font-size: 1rem;
 }
 h1 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: 2.5rem;
 }
 h2 {
@@ -208,8 +208,8 @@ a {
 /*5: Billeder/medier*/
 
 img {
-  width: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
 }
 
 /*6: Formularer & buttons*/
