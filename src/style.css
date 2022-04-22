@@ -201,7 +201,8 @@ a {
 /*5: Billeder/medier*/
 
 img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
