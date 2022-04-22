@@ -194,6 +194,10 @@ h2 {
   z-index: 9;
 }
 
+#logo {
+  font-family: "Abril Fatface", cursive;
+}
+
 /*4: HTML elementer*/
 
 header {
