@@ -342,6 +342,17 @@ nav li::before{
   box-sizing: border-box;
 }
 
+.footer{
+  row-gap: 1rem;
+}
+
+.footer-title{
+  margin-bottom: 0.1rem;
+  font-weight: 400;
+  opacity: 1;
+  font-family: "Abel", sans-serif;
+}
+
 /*11: Media queries*/
 
 /*Media queries til tablet*/
