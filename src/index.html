@@ -1,191 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vildskud</title>
-    <link rel="stylesheet" href="tailwind.css" />
-    <link rel="stylesheet" href="flexboxgrid.css" />
-    <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vildskud</title>
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="flexboxgrid.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <ul class="menu menu-horizontal">
-          <li class="">
-            <a id="logo" href="index.html"
-              >VILD <br />
-              SKUD</a
-            >
-          </li>
-        </ul>
-      </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet" />
 
-      <div class="navbar-center">
-        <p class="btn btn-ghost text-xl normal-case">
-          Copenhagen 03/08 - 07/08
-        </p>
-      </div>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
+</head>
 
-      <div class="navbar-end">
-        <ul class="menu menu-horizontal">
-          <li class="">
-            <a href="program.html">program</a>
-          </li>
-
-          <li class="" tabindex="0">
-            <a>
-              <div class="">
-                <li class=""><a href="">om</a></li>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+<body>
+  <!-- Navbar -->
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <ul class="menu menu-horizontal">
+        <li class="">
+          <a id="logo" href="index.html">VILD <br />
+            SKUD</a>
+        </li>
+      </ul>
     </div>
 
-    <!--End of navbar  -->
-
-    <!-- Hero section -->
-
-    <div class="flex flex-col sm:flex-row">
-      <div class="w-full flex-1 sm:w-4/6 sm:flex-auto">
-        <img
-          class="hidden sm:block"
-          src="img/herosection.png"
-          alt="herosection"
-        />
-        <img
-          class="-z-50 -mt-20 w-full sm:hidden"
-          src="img/herosectionmobile.jpeg"
-          alt="herosection"
-        />
-      </div>
-
-      <div
-        class="hidden w-full flex-1 sm:mt-0 sm:w-3/6 sm:flex-col sm:pr-20 sm:pl-16 sm:pt-28"
-      >
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          SCENEKUNST
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          PERFORMANCE
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          MUSIC
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          DANCE
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          THEATER
-        </p>
-      </div>
-      <div
-        class="hidden w-full flex-1 sm:mt-0 sm:block sm:w-3/6 sm:flex-col sm:pr-20 sm:pl-16 sm:pt-28"
-      >
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          SCENEKUNST
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          PERFORMANCE
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          MUSIC
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          DANCE
-        </p>
-
-        <p
-          class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl"
-        >
-          THEATER
-        </p>
-      </div>
+    <div class="navbar-center">
+      <p class="btn btn-ghost text-xl normal-case">
+        Copenhagen 03/08 - 07/08
+      </p>
     </div>
-    <!-- Hero section end -->
 
-    <div
-      class="-mt-96 ml-32 flex flex-col justify-center sm:ml-0 sm:mt-10 sm:flex-row"
-    >
-      <div class="mb-5 pr-5 sm:mb-0">
-        <button
-          href="program.html"
-          class="bg-bright-green border-bright-green border py-2 px-20 text-lg hover:bg-green-400"
-        >
-          Se program
-        </button>
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal">
+        <li class="">
+          <a href="program.html">program</a>
+        </li>
+
+        <li class="" tabindex="0">
+          <a>
+            <div class="">
+        <li class=""><a href="">om</a></li>
+    </div>
+    </a>
+    </li>
+    </ul>
+  </div>
+  </div>
+
+  <!--End of navbar  -->
+
+  <!-- Hero section -->
+
+  <div class="flex flex-col sm:flex-row">
+    <div class="w-full flex-1 sm:w-4/6 sm:flex-auto">
+      <img class="hidden sm:block" src="img/herosection.png" alt="herosection" />
+      <img class="-z-50 -mt-20 w-full sm:hidden" src="img/herosectionmobile.jpeg" alt="herosection" />
+    </div>
+
+    <div class="hidden w-full flex-1 sm:mt-0 sm:w-3/6 sm:flex-col sm:pr-20 sm:pl-16 sm:pt-28">
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        SCENEKUNST
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        PERFORMANCE
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        MUSIC
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        DANCE
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        THEATER
+      </p>
+    </div>
+    <div class="hidden w-full flex-1 sm:mt-0 sm:block sm:w-3/6 sm:flex-col sm:pr-20 sm:pl-16 sm:pt-28">
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        SCENEKUNST
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        PERFORMANCE
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        MUSIC
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        DANCE
+      </p>
+
+      <p class="max-w-sm text-3xl text-black sm:text-4xl xl:text-3xl 2xl:text-5xl">
+        THEATER
+      </p>
+    </div>
+  </div>
+  <!-- Hero section end -->
+
+  <div class="-mt-96 ml-32 flex flex-col justify-center sm:ml-0 sm:mt-10 sm:flex-row">
+    <div class="mb-5 pr-5 sm:mb-0">
+      <button href="program.html"
+        class="bg-bright-green border-bright-green border py-2 px-20 text-lg hover:bg-green-400">
+        Se program
+      </button>
+    </div>
+    <div>
+      <button class="border border-black bg-none py-2 px-20 text-lg hover:bg-slate-50">
+        Køb billetter
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-10 bg-none sm:bg-slate-100">
+    <h1 class="ml-10 mt-72 sm:mt-0">FEATURED</h1>
+
+    <div class="flex-cols-3 flex flex-col gap-3 p-5 sm:flex-row">
+      <div>
+        <img class="" src="img/featured1.png" alt="featured" />
       </div>
       <div>
-        <button
-          class="border border-black bg-none py-2 px-20 text-lg hover:bg-slate-50"
-        >
-          Køb billetter
-        </button>
+        <img class="" src="img/featured2.png" alt="featured" />
+      </div>
+      <div>
+        <img class="" src="img/featured3.png" alt="featured" />
+      </div>
+    </div>
+  </div>
+
+  <h1 class="ml-10 mt-10">Festival for uafhængig scenekunst</h1>
+  <h1 href="program.html">vildskud</h1>
+
+  <h2><a href="program.html">Program</a></h2>
+  <a href="product.html">Product</a>
+
+  <footer class="footer p-10 md:p-14 bg-slate-50">
+
+    <div class=" flex md:flex-col gap-8 md:gap-16">
+
+      <div>
+        <span class="footer-title"><h3 class="text-black">Kontakt os</h3></span>
+
+        <div class="flex gap-4 items-center  md:gap-1">
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            role="img" class="iconify iconify--ic" width="32" height="32" preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z">
+            </path>
+          </svg>
+
+          <a class="link link-hover">
+            <p> info@vildskud.dk</p>
+          </a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-title"><h3 class="text-black">Følg os</h3></span>
+
+        <div class="flex gap-4 items-center md:gap-1">
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--ph" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+              <path fill="currentColor"
+                d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z">
+              </path>
+            </svg></a>
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path
+                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+                fill="currentColor"></path>
+            </svg></a>
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--bi" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+              <path fill="currentColor"
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104l.022.26l.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105l-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006l-.087-.004l-.171-.007l-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103l.003-.052l.008-.104l.022-.26l.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007l.172-.006l.086-.003l.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
+              </path>
+            </svg></a>
+        </div>
+      </div>
+
+    </div>
+
+     <div class=" flex md:flex-col gap-24 md:gap-10 items-center">
+
+      <div>
+        <span class="footer-title"><h3 class="text-black">Vær med</h3></span>
+        <a class="link link-hover">
+          <p>Frivillig</p>
+        </a>
+        <a class="link link-hover">
+          <p>Open call</p>
+        </a>
+        <a class="link link-hover">
+          <p>Cookie policy</p>
+        </a>
+      </div>
+      <div>
+        <a class="link link-hover underline">
+          <p>Cookiepolitik</p>
+        </a>
+        <a class="link link-hover underline">
+          <p>Privatlivspolitik</p>
+        </a>
       </div>
     </div>
 
-    <div class="mt-10 bg-none sm:bg-slate-100">
-      <h1 class="ml-10 mt-72 sm:mt-0">FEATURED</h1>
+    <a id="logo" class="invisible text-xs p-0 m-0  md:visible md:text-5xl md:py-11" href="index.html">VILD <br />
+      SKUD</a>
+      
 
-      <div class="flex-cols-3 flex flex-col gap-3 p-5 sm:flex-row">
-        <div>
-          <img class="" src="img/featured1.png" alt="featured" />
-        </div>
-        <div>
-          <img class="" src="img/featured2.png" alt="featured" />
-        </div>
-        <div>
-          <img class="" src="img/featured3.png" alt="featured" />
+
+    <div class="flex flex-col gap-4 md:gap-10 justify-center">
+
+      <div>
+        <span class="footer-title">
+          <h3 class="text-black">Tilmeld dig nyhedsbrevet</h3>
+        </span>
+        <div class="form-control w-80 md:w-60 p-1">
+          <label class="label">
+            <span class="label-text italic">
+              <p>Skriv din mail her</p>
+            </span>
+          </label>
+          <div class="relative">
+            <input type="text" placeholder="username@site.com"
+              class="input input-bordered md:p-1 border-bright-green bg-bright-green-light rounded-none w-full pr-14">
+            <button
+              class="btn absolute top-0 right-0 rounded-none text-black text-base bg-bright-green border-bright-green border py-2 hover:bg-green-400">Subscribe</button>
+          </div>
         </div>
       </div>
+
+
+      <p>Vildskud.dk / © 2022 Vildskud</p>
+
     </div>
+  </footer>
 
-    <h1 class="ml-10 mt-10">Festival for uafhængig scenekunst</h1>
-    <h1 href="program.html">vildskud</h1>
 
-    <h2><a href="program.html">Program</a></h2>
-    <a href="product.html">Product</a>
-    <script type="module" src="index.js"></script>
-  </body>
+
+
+
+
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
