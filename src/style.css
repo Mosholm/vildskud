@@ -175,7 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Alumni Sans", sans-serif;
+  font-family: "Abel", sans-serif;
   text-transform: uppercase;
   color: #82ff77;
   font-weight: 800;
@@ -185,7 +185,7 @@ a,
 p,
 button {
   color: black;
-  font-family: "Alumni Sans", sans-serif;
+  font-family: "Abel", sans-serif;
 }
 h2 {
   font-size: 6vw;
