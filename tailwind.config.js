@@ -1,16 +1,8 @@
 module.exports = {
-  plugins: [require("daisyui")],
   content: ["./src/**/*.{html,js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      colors: {
-        "bright-green": "#82FF77",
-      },
-    },
+    extend: {},
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("daisyui"),
-  ],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [require("daisyui")],
 };
