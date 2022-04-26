@@ -219,17 +219,20 @@ img {
 /*6: Formularer & buttons*/
 
 .filtersort {
-  margin-right: -0.5em;
+  margin: auto;
+  text-align: center;
+  position: relative;
 }
 .filtersort button {
-  background-color: black;
+  background-color: none;
   border: none;
-  color: white;
+  color: black;
   padding: 0.5em;
   margin-bottom: 0.5em;
 }
+
 .filtersort button.mixitup-control-active {
-  background-color: #82ff77;
+  background-color: #4ed96c;
 }
 
 label {
@@ -245,12 +248,7 @@ label {
   z-index: 3;
   color: white;
 }
-.logo,
-.navicon {
-  font-family: "Josefin Sans", sans-serif;
-}
-.inlogo {
-}
+
 .mainmenu {
   display: none;
   position: fixed;
@@ -324,10 +322,14 @@ nav li::before{
 .postmeta {
   position: absolute;
   top: 0.25rem;
-  left: 0.25rem;
-  background-color: rgba(0, 0, 0, 0.6);
+
+  background-color: white;
   color: #fff;
-  padding: 0.75rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
   font-size: 0.75rem;
 }
 
@@ -342,11 +344,11 @@ nav li::before{
   box-sizing: border-box;
 }
 
-.footer{
+.footer {
   row-gap: 1rem;
 }
 
-.footer-title{
+.footer-title {
   margin-bottom: 0.1rem;
   font-weight: 400;
   opacity: 1;
