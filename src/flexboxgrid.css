@@ -71,8 +71,10 @@
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: -0.5rem;
+  padding-left: -0.5rem;
+  margin-top: 1rem;
+  height: auto;
 }
 
 .col-xs {
@@ -303,6 +305,7 @@
     flex: 0 0 auto;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    margin-top: 1rem;
   }
 
   .col-sm {

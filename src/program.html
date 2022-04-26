@@ -1,269 +1,265 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sortering/Filtrering</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
 
-    <link rel="stylesheet" href="tailwind.css" />
-    <link rel="stylesheet" href="flexboxgrid.css" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <title>Sortering/Filtrering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Alumni+Sans&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="flexboxgrid.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <script src="mixitup.min.js" defer></script>
-    <script src="mixitup-multifilter.min.js" defer></script>
-    <script src="js.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Abril+Fatface&family=Alumni+Sans&display=swap"
+    rel="stylesheet" />
 
-    <style>
-      .dropbtn {
-        color: black;
-        padding: 16px;
-        font-size: 20px;
-        border: none;
-      }
+  <script src="mixitup.min.js" defer></script>
+  <script src="mixitup-multifilter.min.js" defer></script>
+  <script src="js.js" defer></script>
 
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
+  <style>
+    .dropbtn {
+      color: black;
+      padding: 16px;
+      font-size: 20px;
+      border: none;
+    }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
 
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-    </style>
-  </head>
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
 
-  <body>
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
 
-    <!-- navbar -->
+<body>
 
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <ul class="menu menu-horizontal">
-          <li class="">
-            <a id="logo" href="index.html" class="sm:hover:bg-bright-green hover:bg-none"
-              >VILD <br />
-              SKUD</a
-            >
-          </li>
-        </ul>
-      </div>
+  <!-- navbar -->
 
-      <div class="navbar-center">
-       <a href="index.html"> <p class="btn btn-ghost text-xl normal-case hover:bg-white">
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <ul class="menu menu-horizontal">
+        <li class="">
+          <a id="logo" href="index.html" class="sm:hover:bg-bright-green hover:bg-none">VILD <br />
+            SKUD</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center">
+      <a href="index.html">
+        <p class="btn btn-ghost text-xl normal-case hover:bg-white">
           Copenhagen 03/08 - 07/08
-        </p></a>
+        </p>
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal">
+        <li class="">
+          <a href="program.html" class="sm:hover:bg-bright-green hover:bg-none">program</a>
+        </li>
+
+        <li class="" tabindex="0">
+
+        <li class="">
+          <a href="om.html" class="sm:hover:bg-bright-green hover:bg-none">om</a>
+        </li>
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end of navbar -->
+  <main class="container-fluid">
+    <header class="-mb-10">
+      <h2>PROGRAM</h2>
+    </header>
+
+    <div class="filtersort ">
+      <div class="dropdown mb-3">
+        <div class="flex flex-row">
+          <button type="dropbtn" class="dropbtn">ALLE VENUES</button>
+          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg> </button>
+        </div>
+        <div class="dropdown-content">
+          <fieldset class="input-field" data-filter-group="lokation">
+            <!-- data-logic="and" -->
+            <button type="button" data-toggle=".venuea" class="hover:bg-bright-green">Anemonen</button>
+            <button type="button" data-toggle=".venueb" class="hover:bg-bright-green">
+              Christianshavn Beboerhus
+            </button>
+            <button type="button" data-toggle=".venuec" class="hover:bg-bright-green">
+              VOX - Teaterhuset
+            </button>
+            <button type="button" data-toggle=".venued" class="hover:bg-bright-green">
+              XENON - Teaterhuset
+            </button>
+            <button type="button" data-toggle=".venuee" class="hover:bg-bright-green">Zeppelin</button>
+          </fieldset>
+        </div>
       </div>
 
-      <div class="navbar-end">
-        <ul class="menu menu-horizontal">
-          <li class="">
-            <a href="program.html" class="sm:hover:bg-bright-green hover:bg-none">program</a>
-          </li>
+      <div class="dropdown">
+        <div class="flex flex-row">
+          <button class="dropbtn">ALLE DATOER</button>
+          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg> </button>
+        </div>
+        <div class="dropdown-content">
+          <fieldset class="input-field" data-filter-group="lokation">
+            <!-- data-logic="and" -->
+            <button type="button" data-toggle=".wednesday" class="hover:bg-bright-green">
+              Wednesday 3 Aug
+            </button>
+            <button type="button" data-toggle=".thursday" class="hover:bg-bright-green">
+              Thursday 4 Aug
+            </button>
+            <button type="button" data-toggle=".friday" class="hover:bg-bright-green">Friday 5 Aug</button>
+            <button type="button" data-toggle=".saturday" class="hover:bg-bright-green">
+              Saturday 6 Aug
+            </button>
+            <button type="button" data-toggle=".sunday" class="hover:bg-bright-green">Sunday 7 Aug</button>
+          </fieldset>
+        </div>
+      </div>
 
-          <li class="" tabindex="0">
-           
-              <li class="">
-                <a href="om.html" class="sm:hover:bg-bright-green hover:bg-none">om</a>
-              </li>
-            </a>
-          </li>
-        </ul>
+      <div class="dropdown ">
+        <div class="flex flex-row">
+          <button class="dropbtn">SPILLETIDER </button>
+
+          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20"
+              height="20" viewBox="0 0 24 24">
+              <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg> </button>
+        </div>
+        <div class="dropdown-content">
+          <fieldset class="input-field" data-filter-group="lokation">
+            <!-- data-logic="and" -->
+            <button type="button" data-toggle=".daytime" class="hover:bg-bright-green">
+              Between 12:00-15:00
+            </button>
+            <button type="button" data-toggle=".afternoon" class="hover:bg-bright-green">
+              Between 15:00-18:00
+            </button>
+            <button type="button" data-toggle=".evening" class="hover:bg-bright-green">
+              Between 18:00 - onwards
+            </button>
+          </fieldset>
+        </div>
       </div>
     </div>
-    <!-- end of navbar -->
-    <main class="container-fluid">
-      <header class="-mb-10">
-        <h2>PROGRAM</h2>
-      </header>
 
-      <div class="filtersort ">
-        <div class="dropdown mb-3">
-          <div class="flex flex-row">
-          <button type="dropbtn" class="dropbtn">ALLE VENUES</button>
-          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>  </button> 
-        </div>
-          <div class="dropdown-content">
-            <fieldset class="input-field" data-filter-group="lokation">
-              <!-- data-logic="and" -->
-              <button type="button" data-toggle=".venuea" class="hover:bg-bright-green">Anemonen</button>
-              <button type="button" data-toggle=".venueb" class="hover:bg-bright-green">
-                Christianshavn Beboerhus
-              </button>
-              <button type="button" data-toggle=".venuec" class="hover:bg-bright-green">
-                VOX - Teaterhuset
-              </button>
-              <button type="button" data-toggle=".venued" class="hover:bg-bright-green">
-                XENON - Teaterhuset
-              </button>
-              <button type="button" data-toggle=".venuee" class="hover:bg-bright-green">Zeppelin</button>
-            </fieldset>
-          </div>
+
+
+
+
+    <section class="row billeder">
+      <article class="  col-xs-12 col-sm-4 postsummary mix maskeret venuec wednesday friday saturday daytime"
+        data-name="maskeret">
+
+        <div class="postthumb">
+          <a href="product.html"> <img src="vildskud-webp/confront.webp" alt="flot billede" a>
         </div>
 
-        <div class="dropdown">
-          <div class="flex flex-row">
-          <button class="dropbtn">ALLE DATOER</button>
-          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>  </button> 
-          </div>
-          <div class="dropdown-content">
-            <fieldset class="input-field" data-filter-group="lokation">
-              <!-- data-logic="and" -->
-              <button type="button" data-toggle=".wednesday" class="hover:bg-bright-green">
-                Wednesday 3 Aug
-              </button>
-              <button type="button" data-toggle=".thursday" class="hover:bg-bright-green">
-                Thursday 4 Aug
-              </button>
-              <button type="button" data-toggle=".friday" class="hover:bg-bright-green">Friday 5 Aug</button>
-              <button type="button" data-toggle=".saturday" class="hover:bg-bright-green">
-                Saturday 6 Aug
-              </button>
-              <button type="button" data-toggle=".sunday" class="hover:bg-bright-green">Sunday 7 Aug</button>
-            </fieldset>
-          </div>
+
+        <div class="postmeta">
+          <p>MASKERET</p>
+          <p>Con.Front Collective</p>
         </div>
 
-        <div class="dropdown ">
-          <div class="flex flex-row">
-          <button class="dropbtn">SPILLETIDER   </button> 
-          
-          <button class="dropbtn"> <svg class="fill-current  -ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>  </button> 
+      </article>
+
+
+
+      <article class="col-xs-12 col-sm-4 postsummary mix skammer venuea thursday friday sunday afternoon"
+        data-name="skammer">
+        <div class="postthumb">
+          <img src="vildskud-webp/egotrip.webp" alt="flot billede" />
         </div>
-          <div class="dropdown-content">
-            <fieldset class="input-field" data-filter-group="lokation">
-              <!-- data-logic="and" -->
-              <button type="button" data-toggle=".daytime" class="hover:bg-bright-green">
-                Between 12:00-15:00
-              </button>
-              <button type="button" data-toggle=".afternoon" class="hover:bg-bright-green">
-                Between 15:00-18:00
-              </button>
-              <button type="button" data-toggle=".evening" class="hover:bg-bright-green">
-                Between 18:00 - onwards
-              </button>
-            </fieldset>
-          </div>
+        <div class="postmeta">
+          <p>SKAMMER DU PÅ MIG?</p>
+          <p>Teater EGOTRIP</p>
         </div>
-      </div>
+      </article>
+      <article class="col-xs-12 col-sm-4 postsummary mix juks dag venueb wednesday saturday sunday evening"
+        data-name="et">
+        <div class="postthumb">
+          <img src="vildskud-webp/juks.webp" alt="flot billede" />
+        </div>
+        <div class="postmeta">
+          <p>ET SURT OPSTØD</p>
+          <p>Juks</p>
+        </div>
+      </article>
+      <article class="col-xs-12 col-sm-4 postsummary mix mona nat venued thursday friday daytime" data-name="Mona">
+        <div class="postthumb">
+          <img src="vildskud-webp/monalisa.webp" alt="flot billede" />
+        </div>
+        <div class="postmeta">
+          <p>MONA LISA NATTEN</p>
+          <p>Louvra</p>
+        </div>
+      </article>
+      <article class="col-xs-12 col-sm-4 postsummary mix alt nat venuea venuee saturday sunday afternoon"
+        data-name="alt">
+        <div class="postthumb">
+          <img src="vildskud-webp/panta.webp" alt="flot billede" />
+        </div>
+        <div class="postmeta">
+          <p>ALT KØRER, IK</p>
+          <p>Panta Reje</p>
+        </div>
+      </article>
+      <article class="col-xs-12 col-sm-4 postsummary mix staa dag venueb wednesday saturday evening" data-name="staa">
+        <div class="postthumb">
+          <img src="vildskud-webp/tungetasker.webp" alt="flot billede" />
+        </div>
+        <div class="postmeta">
+          <p>STÅ RET, FÅ RET</p>
+          <p>Teater Tunge Tasker</p>
+        </div>
+      </article>
 
-
-    
-
-      
-      <section class="row billeder">
-      <article
-          class="col-xs-12 col-sm-4 postsummary mix maskeret venuec wednesday friday saturday daytime"
-          data-name="maskeret"
-        >
-          <div class="postthumb ">
-           <a href="product.html"> <img src="vildskud-webp/confront.webp" alt="flot billede" />/a>
-          </div>
-          <div class="postmeta  ">
-            <p>MASKERET</p>
-            <p>Con.Front Collective</p>
-          </div>
-          
-        </article> 
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix skammer venuea thursday friday sunday afternoon"
-          data-name="skammer"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/egotrip.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>SKAMMER DU PÅ MIG?</p>
-            <p>Teater EGOTRIP</p>
-          </div>
-        </article>
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix juks dag venueb wednesday saturday sunday evening"
-          data-name="et"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/juks.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>ET SURT OPSTØD</p>
-            <p>Juks</p>
-          </div>
-        </article>
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix mona nat venued thursday friday daytime"
-          data-name="Mona"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/monalisa.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>Mona Lisa Natten</p>
-          </div>
-        </article>
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix alt nat venuea venuee saturday sunday afternoon"
-          data-name="alt"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/panta.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>ALT KØRER, IK</p>
-            <p>Panta Reje</p>
-          </div>
-        </article>
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix staa dag venueb wednesday saturday evening"
-          data-name="staa"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/tungetasker.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>STÅ RET, FÅ RET</p>
-            <p>Teater Tunge Tasker</p>
-          </div>
-        </article>
-
-        <article
-          class="col-xs-12 col-sm-4 postsummary mix wish venuec wednesday thursday friday saturday sunday daytime"
-          data-name="wish"
-        >
-          <div class="postthumb">
-            <img src="vildskud-webp/wish.webp" alt="flot billede" />
-          </div>
-          <div class="postmeta">
-            <p>WISH</p>
-            <p>Hvem har inviteret Odile?</p>
-          </div>
-        </article>
-        <!--  <article
+      <article class="col-xs-12 col-sm-4 postsummary mix wish venuec wednesday thursday friday saturday sunday daytime"
+        data-name="wish">
+        <div class="postthumb">
+          <img src="vildskud-webp/wish.webp" alt="flot billede" />
+        </div>
+        <div class="postmeta">
+          <p>WISH</p>
+          <p>Hvem har inviteret Odile?</p>
+        </div>
+      </article>
+      <!--  <article
           class="col-xs-12 col-sm-4 postsummary mix william nat amagerstrand"
           data-name="william"
         >
@@ -407,157 +403,114 @@
           </div>
           <div class="postmeta">12/01 - Torben</div>
         </article> -->
-      </section>
-    </main>
+    </section>
+  </main>
 
-    <footer class="footer mt-10 bg-slate-50 p-10 md:p-14">
-      <div class="flex gap-8 md:flex-col md:gap-16">
-        <div>
-          <span class="footer-title"
-            ><h3 class="text-black">Kontakt os</h3></span
-          >
+  <footer class="footer mt-10 bg-slate-50 p-10 md:p-14">
+    <div class="flex gap-8 md:flex-col md:gap-16">
+      <div>
+        <span class="footer-title">
+          <h3 class="text-black">Kontakt os</h3>
+        </span>
 
-          <div class="flex items-center gap-4 md:gap-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              aria-hidden="true"
-              role="img"
-              class="iconify iconify--ic"
-              width="32"
-              height="32"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="0 0 24 24"
-            >
+        <div class="flex items-center gap-4 md:gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            role="img" class="iconify iconify--ic" width="32" height="32" preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z">
+            </path>
+          </svg>
+
+          <a class="link link-hover">
+            <p>info@vildskud.dk</p>
+          </a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-title">
+          <h3 class="text-black">Følg os</h3>
+        </span>
+
+        <div class="flex items-center gap-4 md:gap-1">
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--ph" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256">
+              <path fill="currentColor"
+                d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z">
+              </path>
+            </svg></a>
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
               <path
-                fill="currentColor"
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z"
-              ></path>
-            </svg>
-
-            <a class="link link-hover">
-              <p>info@vildskud.dk</p>
-            </a>
-          </div>
+                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+                fill="currentColor"></path>
+            </svg></a>
+          <a class="link link-hover"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="iconify iconify--bi" width="32" height="32"
+              preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16">
+              <path fill="currentColor"
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104l.022.26l.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105l-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006l-.087-.004l-.171-.007l-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103l.003-.052l.008-.104l.022-.26l.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007l.172-.006l.086-.003l.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
+              </path>
+            </svg></a>
         </div>
-        <div>
-          <span class="footer-title"><h3 class="text-black">Følg os</h3></span>
+      </div>
+    </div>
 
-          <div class="flex items-center gap-4 md:gap-1">
-            <a class="link link-hover"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="iconify iconify--ph"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  fill="currentColor"
-                  d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"
-                ></path></svg
-            ></a>
-            <a class="link link-hover"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="iconify iconify--mdi"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
-                  fill="currentColor"
-                ></path></svg
-            ></a>
-            <a class="link link-hover"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="iconify iconify--bi"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="currentColor"
-                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104l.022.26l.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105l-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006l-.087-.004l-.171-.007l-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103l.003-.052l.008-.104l.022-.26l.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007l.172-.006l.086-.003l.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
-                ></path></svg
-            ></a>
+    <div class="flex items-center gap-24 md:flex-col md:gap-10">
+      <div>
+        <span class="footer-title">
+          <h3 class="text-black">Vær med</h3>
+        </span>
+        <a class="link link-hover">
+          <p>Frivillig</p>
+        </a>
+        <a class="link link-hover">
+          <p>Open call</p>
+        </a>
+        <a class="link link-hover">
+          <p>Cookie policy</p>
+        </a>
+      </div>
+      <div>
+        <a class="link link-hover underline">
+          <p>Cookiepolitik</p>
+        </a>
+        <a class="link link-hover underline">
+          <p>Privatlivspolitik</p>
+        </a>
+      </div>
+    </div>
+
+    <a id="logo" class="invisible m-0 p-0 text-xs md:visible md:py-11 md:text-5xl" href="index.html">VILD <br />
+      SKUD</a>
+
+    <div class="flex flex-col justify-center gap-4 md:gap-10">
+      <div>
+        <span class="footer-title">
+          <h3 class="text-black">Tilmeld dig nyhedsbrevet</h3>
+        </span>
+        <div class="form-control w-80 p-1 md:w-60">
+          <label class="label">
+            <span class="label-text italic">
+              <p>Skriv din mail her</p>
+            </span>
+          </label>
+          <div class="relative">
+            <input type="text" placeholder="username@site.com"
+              class="input input-bordered border-bright-green bg-bright-green-light w-full rounded-none pr-14 md:p-1" />
+            <button
+              class="btn bg-bright-green border-bright-green absolute top-0 right-0 rounded-none border py-2 text-base text-black hover:bg-green-400">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="flex items-center gap-24 md:flex-col md:gap-10">
-        <div>
-          <span class="footer-title"><h3 class="text-black">Vær med</h3></span>
-          <a class="link link-hover">
-            <p>Frivillig</p>
-          </a>
-          <a class="link link-hover">
-            <p>Open call</p>
-          </a>
-          <a class="link link-hover">
-            <p>Cookie policy</p>
-          </a>
-        </div>
-        <div>
-          <a class="link link-hover underline">
-            <p>Cookiepolitik</p>
-          </a>
-          <a class="link link-hover underline">
-            <p>Privatlivspolitik</p>
-          </a>
-        </div>
-      </div>
+      <p>Vildskud.dk / © 2022 Vildskud</p>
+    </div>
+  </footer>
+</body>
 
-      <a
-        id="logo"
-        class="invisible m-0 p-0 text-xs md:visible md:py-11 md:text-5xl"
-        href="index.html"
-        >VILD <br />
-        SKUD</a
-      >
-
-      <div class="flex flex-col justify-center gap-4 md:gap-10">
-        <div>
-          <span class="footer-title">
-            <h3 class="text-black">Tilmeld dig nyhedsbrevet</h3>
-          </span>
-          <div class="form-control w-80 p-1 md:w-60">
-            <label class="label">
-              <span class="label-text italic">
-                <p>Skriv din mail her</p>
-              </span>
-            </label>
-            <div class="relative">
-              <input
-                type="text"
-                placeholder="username@site.com"
-                class="input input-bordered border-bright-green bg-bright-green-light w-full rounded-none pr-14 md:p-1"
-              />
-              <button
-                class="btn bg-bright-green border-bright-green absolute top-0 right-0 rounded-none border py-2 text-base text-black hover:bg-green-400"
-              >
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <p>Vildskud.dk / © 2022 Vildskud</p>
-      </div>
-    </footer>
-  </body>
 </html>
