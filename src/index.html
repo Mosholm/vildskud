@@ -18,34 +18,37 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="navbar bg-base-100">
-      <div class="navbar-start">
-        <ul class="menu menu-horizontal">
+    <div class=" navbar bg-base-100">
+      <div class="navbar-start z-10">
+        <ul class="relative menu menu-horizontal">
           <li class="">
-            <a id="logo" href="index.html" class="sm:hover:bg-bright-green hover:bg-none"
+            <a id="logo" href="index.html" class="relative sm:hover:bg-bright-green hover:bg-none"
               >VILD <br />
               SKUD</a
             >
           </li>
         </ul>
       </div>
-
+    
       <div class="navbar-center z-10">
-        <p class="btn btn-ghost text-xl normal-case hover:bg-white">
-          Copenhagen 03/08 - 07/08
-        </p>
-      </div>
-
-      <div class="navbar-end">
-        <ul class="menu menu-horizontal">
-          <li class="">
-            <a href="program.html" class="sm:hover:bg-bright-green hover:bg-none">program</a>
+       
+        <ul class="relative menu menu-horizontal">
+          <li class="relative">
+            <a href="program.html" class="text-xl relative sm:hover:bg-bright-green ">Copenhagen 03/08 - 07/08</a>
           </li>
-
-          <li class="" tabindex="0">
+    </ul>
+      </div>
+    
+      <div class="navbar-end z-10">
+        <ul class="relative menu menu-horizontal">
+          <li class="relative">
+            <a href="program.html" class="relative sm:hover:bg-bright-green hover:bg-none">program</a>
+          </li>
+    
+          <li class="relative" tabindex="0">
            
-              <li class="">
-                <a href="om.html" class="sm:hover:bg-bright-green hover:bg-none">om</a>
+              <li class="relative">
+                <a href="om.html" class="relative sm:hover:bg-bright-green hover:bg-none">om</a>
               </li>
             </a>
           </li>
@@ -159,12 +162,96 @@ Københavns festival for uafhængig scenekunst.
       </div>
     </div>
 
+    <h1 class="ml-14 mt-72 sm:mt-10">FEATURED</h1>
+
+    <div class="mt-10 bg-none pb-5 px-5 ml-7 flex flex-col sm:flex-row items-center ">
   
 
-    <div class="mt-10 bg-none pb-5">
-      <h1 class="ml-10 mt-72 sm:mt-0">FEATURED</h1>
+     
 
-      <div class="flex-cols-3 flex flex-col gap-3 p-5 sm:flex-row">
+<div class="flip-card mx-3 sm:my-0 my-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vildskud-webp/featured1.webp" alt="Avatar" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back  ">
+      
+      <h3 class="px-5 pt-28 sm:pt-16">Alt KØRER, IK</h3> 
+      <p class="px-5  sm:text-xs">ALT KØRER, IK fortæller en historie om at slutte fred med sit kaos, at tage sine konflikter ved hornene, se dem i øjnene og elske dem.</p> 
+
+      <div class="mb-5 pr-5 sm:mb-0">
+        <a href="program.html"
+          ><button
+            class="bg-bright-green border-bright-green border mt-5 py-2 px-5 text-lg hover:bg-green-400"
+          >
+           Find out more
+          </button></a
+        >
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card mx-3 sm:my-0 my-5">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vildskud-webp/featured2.webp" alt="Avatar" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back ">
+      
+      <h3 class="px-5 pt-28 sm:pt-20">Stå ret, få ret</h3> 
+      <p class="px-5 sm:text-xs">Stå ret få ret’ er forestilling der om handler Danmarks nyeste tv-program/sociale eksperiment.</p> 
+
+      <div class="mb-5 pr-5 sm:mb-0">
+        <a href="program.html"
+          ><button
+            class="bg-bright-green border-bright-green border mt-5 py-2 px-5 text-lg hover:bg-green-400"
+          >
+            Find out more
+          </button></a
+        >
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="flip-card mx-3 sm:my-0 my-5 ">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vildskud-webp/featured3.webp" alt="Avatar" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back  ">
+
+     
+      
+      <h3 class="px-5 pt-28 sm:pt-14">MASKERET</h3> 
+      <p class="px-5 sm:text-xs">"MASKERET" by CON:FRONT Collective – A cross-aesthetic performance. CON:FRONT COLLECTIVE explores the phenomenon of the mask. </p> 
+     
+
+      <div class="mb-5 pr-5 sm:mb-0">
+        <a href="program.html"
+          ><button
+            class="bg-bright-green border-bright-green border mt-5 py-2 px-5 text-lg hover:bg-green-400"
+          >
+           Find out more
+          </button></a
+        >
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+   <!--    <div class="flex-cols-3 flex flex-col gap-3 p-5 sm:flex-row">
         <div>
           <img class="" src="vildskud-webp/featured1.webp" alt="featured" />
         </div>
@@ -188,8 +275,22 @@ Københavns festival for uafhængig scenekunst.
             </button></a
           >
         </div>
-      </div>
+      </div> -->
     </div>
+
+    <div
+        class="ml-36 flex flex-col justify-center sm:ml-0 sm:flex-row sm:justify-center"
+      >
+        <div class="mb-5 pr-5 sm:mb-0">
+          <a href="program.html"
+            ><button
+              class="bg-bright-green border-bright-green border py-2 px-20 text-lg hover:bg-green-400"
+            >
+              Se program
+            </button></a
+          >
+        </div>
+      </div> 
 
     
 
